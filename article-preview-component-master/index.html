@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Article preview component</title>
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="src/styles/styles.css">
+  <script src="src/script/main.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header__content">
+      <div class="header__content__overlay">
+        <img src="images/drawers.jpg" class="image__capa" alt="foto logo">
+        <div class="header__content__infos">
+          <div class="header__content__infos__title">
+            <h2>
+              Shift the overall look and feel by adding these wonderful
+              touches to furniture in your home
+            </h2>
+          </div>
+          <div class="header__content__infos__description">
+            <p>
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve got some simple tips
+              to help you make any room feel complete.
+            </p>
+          </div>
+          <div class="header__content__infos__user">
+            <div class="header__content__infos__user__info">
+              <div class="header__content__infos__user__info__infos">
+                <img class="image__user" src="images/avatar-michelle.jpg" alt="Foto usuario">
+                <div class="header__content__infos__user__info__infos__name">
+                  <p>Michelle Appleton</p>
+                  <span>28 Jun 2020</span>
+                </div>
+              </div>
+            </div>
+            <div class="header__content__infos__user__share">
+              <button id="share-button">
+                <img src="images/icon-share.svg" class="image__icon" id="share-icon"  alt="icon share">
+              </button>
+              <div id="share-box" class="share-box">
+                <p>SHARE</p>
+                <div class="share-options">
+                  <a href="#" class="share-option">
+                    <img src="images/icon-facebook.svg" alt="logo facebook">
+                  </a>
+                  <a href="#" class="share-option">
+                    <img src="images/icon-twitter.svg" alt="logo twitter">
+                  </a>
+                  <a href="#" class="share-option">
+                    <img src="images/icon-pinterest.svg" alt="logo pinterest">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
