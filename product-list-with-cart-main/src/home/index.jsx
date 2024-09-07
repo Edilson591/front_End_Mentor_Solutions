@@ -228,7 +228,7 @@ function ProductOverview() {
                 </div>
                 <div className="cart-carbon-container">
                   <img
-                    src="assets/images/icon-carbon-neutral.svg"
+                    src="https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/icon-carbon-neutral.svg"
                     alt="icon carbon neutral"
                   />
                   <p className="carbon-neutral-message">
@@ -242,7 +242,7 @@ function ProductOverview() {
             ) : (
               <div className="cart-empty">
                 <img
-                  src="./src/assets/images/illustration-empty-cart.svg"
+                  src="https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/illustration-empty-cart.svg"
                   alt="cart empty"
                 />
                 <h3 className="cart-emptry-text">

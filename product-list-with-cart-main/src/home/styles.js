@@ -118,27 +118,27 @@ export const SectionContainer = styled.section`
             .remove-from-cart-button {
               display: flex;
               align-items: center;
-              background-image: url("assets/images/icon-decrement-quantity.svg");
+              background-image: url("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/icon-decrement-quantity.svg");
               background-repeat: no-repeat;
               background-position: center;
               transition: all 0.5s ease;
               background-color: transparent;
               &:hover {
                 background-color: #fff;
-                background-image: url("assets/images/icon-decrement-quantity-hover.svg");
+                background-image: url("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/icon-decrement-quantity-hover.svg");
                 background-repeat: no-repeat;
                 background-position: center;
               }
             }
             .add-to-cart-button {
-              background-image: url("assets/images/icon-increment-quantity.svg");
+              background-image: url("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/icon-increment-quantity.svg");
               background-repeat: no-repeat;
               background-position: center;
               transition: all 0.5s ease;
               background-color: transparent;
               &:hover {
                 background-color: #fff;
-                background-image: url("assets/images/icon-increment-quantity-hover.svg");
+                background-image: url("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/icon-increment-quantity-hover.svg");
                 background-repeat: no-repeat;
                 background-position: center;
               }
@@ -275,7 +275,7 @@ export const AsideContainer = styled.section`
     color: #fff;
     border: 1px solid hsl(14, 25%, 72%);
     background-color: transparent;
-    background-image: url("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/5a5a90c0901d7c2b752ea87511340eaa32aa177e/product-list-with-cart-main/src/assets/images/icon-remove-item.svg");
+    background-image: url("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/icon-remove-item.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 10px 10px;
@@ -283,7 +283,7 @@ export const AsideContainer = styled.section`
   }
 
   .remove-button:hover {
-    background-image: url("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/5a5a90c0901d7c2b752ea87511340eaa32aa177e/product-list-with-cart-main/src/assets/images/icon-remove-item-hover.svg");
+    background-image: url("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/icon-remove-item-hover.svg");
     border-color: hsl(14, 65%, 9%);
     background-repeat: no-repeat;
     background-position: center;

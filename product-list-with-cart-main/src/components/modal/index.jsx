@@ -22,7 +22,7 @@ function ElementModal({ isOpen, onRequestClose }) {
         <div className="finish-cart-order">
           <div className="finish-cart-order-img">
             <img
-              src="./src/assets/images/icon-order-confirmed.svg"
+              src="https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/icon-order-confirmed.svg"
               alt="icon order confirmed"
             />
           </div>
