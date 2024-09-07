@@ -118,27 +118,27 @@ export const SectionContainer = styled.section`
             .remove-from-cart-button {
               display: flex;
               align-items: center;
-              background-image: url("./src/assets/images/icon-decrement-quantity.svg");
+              background-image: url("assets/images/icon-decrement-quantity.svg");
               background-repeat: no-repeat;
               background-position: center;
               transition: all 0.5s ease;
               background-color: transparent;
               &:hover {
                 background-color: #fff;
-                background-image: url("./src/assets/images/icon-decrement-quantity-hover.svg");
+                background-image: url("assets/images/icon-decrement-quantity-hover.svg");
                 background-repeat: no-repeat;
                 background-position: center;
               }
             }
             .add-to-cart-button {
-              background-image: url("./src/assets/images/icon-increment-quantity.svg");
+              background-image: url("assets/images/icon-increment-quantity.svg");
               background-repeat: no-repeat;
               background-position: center;
               transition: all 0.5s ease;
               background-color: transparent;
               &:hover {
                 background-color: #fff;
-                background-image: url("./src/assets/images/icon-increment-quantity-hover.svg");
+                background-image: url("assets/images/icon-increment-quantity-hover.svg");
                 background-repeat: no-repeat;
                 background-position: center;
               }

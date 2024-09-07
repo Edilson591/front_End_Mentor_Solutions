@@ -167,7 +167,7 @@ function ProductOverview() {
                         >
                           <img
                             className="icon-card"
-                            src="./src/assets/images/icon-add-to-cart.svg"
+                            src="assets/images/icon-add-to-cart.svg"
                             alt="icon de carrinho"
                           />
                           <span className="add-card-name">Add to Cart</span>
@@ -228,7 +228,7 @@ function ProductOverview() {
                 </div>
                 <div className="cart-carbon-container">
                   <img
-                    src="./src/assets/images/icon-carbon-neutral.svg"
+                    src="assets/images/icon-carbon-neutral.svg"
                     alt="icon carbon neutral"
                   />
                   <p className="carbon-neutral-message">
