@@ -96,9 +96,9 @@ function ProductOverview() {
 
 
 //
-  if (!data) {
-    return <div className="login"></div>;
-  }
+  // if (!data) {
+  //   return <div className="login"></div>;
+  // }
 
   return (
     <>
