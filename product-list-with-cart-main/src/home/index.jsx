@@ -167,7 +167,7 @@ function ProductOverview() {
                         >
                           <img
                             className="icon-card"
-                            src="assets/images/icon-add-to-cart.svg"
+                            src="https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/b691a31edffbe9127fc314cffff7f52fef6d8db1/product-list-with-cart-main/src/assets/images/icon-add-to-cart.svg"
                             alt="icon de carrinho"
                           />
                           <span className="add-card-name">Add to Cart</span>
