@@ -81,7 +81,7 @@ function ProductOverview() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("./data.json");
+        const response = await fetch("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/main/product-list-with-cart-main/data.json");
         const result = await response.json();
         setTimeout(() => {
           setData(result);
