@@ -83,9 +83,9 @@ function ProductOverview() {
       try {
         const response = await fetch("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/main/product-list-with-cart-main/data.json");
         const result = await response.json();
-        setTimeout(() => {
+
           setData(result);
-        },1000)
+
       } catch (error) {
         console.error("Erro ao carregar o JSON:", error);
       }
@@ -96,9 +96,9 @@ function ProductOverview() {
 
 
 //
-  // if (!data) {
-  //   return <div className="login"></div>;
-  // }
+  if (!data) {
+    return <div className="login"></div>;
+  }
 
   return (
     <>
