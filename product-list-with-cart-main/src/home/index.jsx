@@ -8,19 +8,18 @@ function ProductOverview() {
   const [modalIsOpen, setModalIsOpen] = useState(false); // controle de abertura e fechamento do modal
   const [cart, setCart] = useContext(CartItemsContext); // pegando o cart do contexto principal
   
-  //salvar o estado do botão
+  // salvar o estado do botão
   const getCartVisible = () => {
     const savedCartItem = localStorage.getItem("visibleCart");
     return savedCartItem ? JSON.parse(savedCartItem) : {};
   };
   const [visibility, setVisibility] = useState(getCartVisible);
 
-
   useEffect(() => {
     localStorage.setItem("visibleCart", JSON.stringify(visibility));
   }, [visibility]);
 
-//modifica o estado do modal
+  // modifica o estado do modal
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => {
     setModalIsOpen(false)
@@ -30,7 +29,7 @@ function ProductOverview() {
     setVisibility({});
   };
 
-// adiciona um item no carrinho
+  // adiciona um item no carrinho
   const addCartItem = (productId) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === productId);
@@ -46,7 +45,8 @@ function ProductOverview() {
       }
     });
   };
-//remove um item do carrinho
+
+  // remove um item do carrinho
   const removeCartItem = (productId) => {
     setCart((prevCart) => {
       const updatedCart = prevCart
@@ -68,7 +68,8 @@ function ProductOverview() {
       return updatedCart;
     });
   };
-//remove o item do carrinho principal
+
+  // remove o item do carrinho principal
   const removeItemComplet = (productId) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
     setVisibility((prevVisibility) => ({
@@ -77,15 +78,13 @@ function ProductOverview() {
     }));
   };
 
-  //busca api
+  // busca api
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("https://raw.githubusercontent.com/Edilson591/front_End_Mentor_Solutions/main/product-list-with-cart-main/data.json");
         const result = await response.json();
-
-          setData(result);
-
+        setData(result);
       } catch (error) {
         console.error("Erro ao carregar o JSON:", error);
       }
@@ -94,10 +93,8 @@ function ProductOverview() {
     fetchData();
   }, []);
 
-
-//
   if (!data) {
-    return <div className="login"></div>;
+    return <div role="status">Loading...</div>;
   }
 
   return (
@@ -107,11 +104,12 @@ function ProductOverview() {
           <h1 className="title-card">Desserts</h1>
         </S.HeaderContainer>
         <S.SectionContainer className="itemSection2">
-          <div className="product-list grid-container">
+          <div className="product-list grid-container" role="list">
             {data.map((product) => (
               <div
                 className={`product-card item${product.id}`}
                 key={product.id}
+                role="listitem"
               >
                 <div className="product-image-button">
                   <picture>
@@ -135,6 +133,8 @@ function ProductOverview() {
                           ? "image-card is-active"
                           : "image-card"
                       }
+                      role="img"
+                      aria-label={product.name}
                     />
                   </picture>
                   <div className="button-container">
@@ -143,6 +143,7 @@ function ProductOverview() {
                         <button
                           className="remove-from-cart-button"
                           onClick={() => removeCartItem(product.id)}
+                          aria-label={`Remove ${product.name} from cart`}
                         />
                         <span className="product-quantity">
                           {cart.find((item) => item.id === product.id)
@@ -151,6 +152,7 @@ function ProductOverview() {
                         <button
                           className="add-to-cart-button"
                           onClick={() => addCartItem(product.id)}
+                          aria-label={`Add ${product.name} to cart`}
                         />
                       </div>
                     ) : (
@@ -164,6 +166,7 @@ function ProductOverview() {
                               [product.id]: true,
                             }));
                           }}
+                          aria-label={`Add ${product.name} to cart`}
                         >
                           <img
                             className="icon-card"
@@ -177,7 +180,7 @@ function ProductOverview() {
                   </div>
                 </div>
                 <div className="product-info">
-                  <p className="product-category">{product.category}</p>
+                  <p className="product-category" role="heading" aria-level="3">{product.category}</p>
                   <h2 className="product-name">{product.name}</h2>
                   <p className="product-price">${product.price.toFixed(2)}</p>
                 </div>
@@ -186,13 +189,13 @@ function ProductOverview() {
           </div>
         </S.SectionContainer>
         <S.AsideContainer className="itemSection3">
-          <aside className="cart">
+          <aside className="cart" role="complementary">
             <h2 className="cart-title">Your Cart({cart.length})</h2>
             {cart.length > 0 ? (
               <>
-                <ul className="cart-items">
+                <ul className="cart-items" role="list">
                   {cart.map((item) => (
-                    <li className="cart-item" key={item.id}>
+                    <li className="cart-item" key={item.id} role="listitem">
                       <div className="cart-product">
                         <span className="product-name">{item.name}</span>
                         <div className="cart-quatity-product">
@@ -210,6 +213,7 @@ function ProductOverview() {
                       <button
                         className="remove-button"
                         onClick={() => removeItemComplet(item.id)}
+                        aria-label={`Remove ${item.name} from cart`}
                       />
                     </li>
                   ))}
@@ -235,7 +239,7 @@ function ProductOverview() {
                     This is a <b>carbon-neutral</b> delivery
                   </p>
                 </div>
-                <button className="confirm-button" onClick={openModal}>
+                <button className="confirm-button" onClick={openModal} aria-label="Confirm Order">
                   Confirm Order
                 </button>
               </>
